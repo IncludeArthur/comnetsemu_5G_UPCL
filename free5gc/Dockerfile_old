@@ -25,39 +25,26 @@ RUN cd $GOPATH/src/free5gc \
     && make all
 
 # Alpine is used for debug purpose. You can use scratch for a smaller footprint.
-FROM ubuntu:focal
+FROM alpine:3.15 AS free5gc
 
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        curl \
-        net-tools \
-        tcpdump \
-        iptables \
-        mongodb \
-        iperf3 && \
-    apt-get autoremove -y && apt-get autoclean
-
+WORKDIR /free5gc
 RUN mkdir -p config/TLS/ public
 
 # Copy executables
-COPY --from=builder /go/src/free5gc/bin /free5gc/bin
-COPY --from=builder /go/src/free5gc/NFs /free5gc/NFs
-COPY --from=builder /go/src/free5gc/webconsole /free5gc/webconsole
+COPY --from=builder /go/src/free5gc/bin/* ./
+COPY --from=builder /go/src/free5gc/NFs/upf/build/bin/* ./
+COPY --from=builder /go/src/free5gc/webconsole/bin/webconsole ./webui
 
 # Copy static files (webui frontend)
-#COPY --from=builder /go/src/free5gc/webconsole/public ./public
+COPY --from=builder /go/src/free5gc/webconsole/public ./public
 
 # Copy linked libs
-#COPY --from=builder /go/src/free5gc/NFs/upf/build/updk/src/third_party/libgtp5gnl/lib/libgtp5gnl.so.0 ./
-#COPY --from=builder /go/src/free5gc/NFs/upf/build/utlt_logger/liblogger.so ./
+COPY --from=builder /go/src/free5gc/NFs/upf/build/updk/src/third_party/libgtp5gnl/lib/libgtp5gnl.so.0 ./
+COPY --from=builder /go/src/free5gc/NFs/upf/build/utlt_logger/liblogger.so ./
 
 # Copy configuration files (not used for now)
-COPY --from=builder /go/src/free5gc/config /free5gc/config
-#COPY --from=builder /go/src/free5gc/NFs/upf/build/config/* ./config/
+COPY --from=builder /go/src/free5gc/config/* ./config/
+COPY --from=builder /go/src/free5gc/NFs/upf/build/config/* ./config/
 
 # Copy default certificates (not used for now)
-#COPY --from=builder /go/src/free5gc/config/TLS/* ./config/TLS/
-
-WORKDIR /free5gc
+COPY --from=builder /go/src/free5gc/config/TLS/* ./config/TLS/
