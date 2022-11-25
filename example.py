@@ -26,14 +26,16 @@ if __name__ == "__main__":
 
     info("*** Creating hosts\n")
 
-    h1 = net.addDockerHost(
-        "h1",
+    info("*** Add core network\n")
+
+    core = net.addDockerHost(
+        "core",
         dimage="free5gc_v2",
         ip="192.168.0.101",
         #dcmd="echo",
         docker_args={
-            "hostname": "h1",
-            "ports": {"5000/tcp":5000},
+            "hostname": "core",
+            "ports": {"5000/tcp":5000, "8000" :8000},
             "volumes": {
                 prj_folder + "/free5gc/config":{
                     "bind": "/free5gc/config",
@@ -52,6 +54,37 @@ if __name__ == "__main__":
                     "mode": "rw",
                 },
             },
+            "cap_add": ["NET_ADMIN"],
+            "sysctls": {"net.ipv4.ip_forward": 1},
+            "devices": "/dev/net/tun:/dev/net/tun:rwm"
+        },
+    )
+
+    info("*** Add gNB and UE\n")
+
+    gnb = net.addDockerHost(
+        "gnb",
+        dimage="ueransim",
+        ip="192.168.0.102",
+        #dcmd="echo",
+        docker_args={
+            "hostname": "gnb",
+            "volumes": {
+                prj_folder + "/ueransim/config":{
+                    "bind": "/ueransim/config",
+                    "mode": "rw",
+                },
+                prj_folder + "/ueransim/scripts":{
+                    "bind": "/ueransim/scripts",
+                    "mode": "rw",
+                },
+                prj_folder + "/log": {
+                    "bind": "/ueransim/log",
+                    "mode": "rw",
+                },
+            },
+            "cap_add": ["NET_ADMIN"],
+            "devices": "/dev/net/tun:/dev/net/tun:rwm"
         },
     )
 
