@@ -29,3 +29,6 @@ for NF in ${NF_LIST}; do
     PID_LIST+=($!)
     sleep 0.1
 done
+
+# --- start webconsole ---
+/free5gc/webconsole/webconsole -c /free5gc/config/webuicfg.yaml &

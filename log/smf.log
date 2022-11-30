@@ -1,0 +1,3 @@
+time="2022-11-29T15:41:00Z" level=error msg="open ./config/uerouting.yaml: no such file or directory" category=CFG component=SMF
+time="2022-11-29T15:41:00Z" level=error msg="[-- PLEASE REFER TO SAMPLE CONFIG FILE COMMENTS --]" category=CFG component=SMF
+time="2022-11-29T15:41:00Z" level=error msg="SMF Run error: Failed to initialize !!\n" category=App component=SMF

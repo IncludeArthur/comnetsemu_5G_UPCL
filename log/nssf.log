@@ -1,0 +1,5 @@
+time="2022-11-29T15:41:00Z" level=info msg="NSSF Log level is set to [info] level" category=Init component=NSSF
+time="2022-11-29T15:41:01Z" level=info msg="config version [1.0.1]" category=CFG component=NSSF
+time="2022-11-29T15:41:01Z" level=info msg=nssf category=App component=NSSF
+time="2022-11-29T15:41:01Z" level=info msg="NSSF version:  \n\tfree5GC version: v3.1.1\n\tbuild time:      2022-11-23T15:45:43Z\n\tcommit hash:     9ab2a7e3\n\tcommit time:     2022-04-07T15:51:45Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NSSF
+time="2022-11-29T15:41:01Z" level=info msg="Server started" category=Init component=NSSF

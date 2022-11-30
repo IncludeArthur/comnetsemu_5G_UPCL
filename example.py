@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     core = net.addDockerHost(
         "core",
-        dimage="free5gc_v2",
+        dimage="free5gc",
         ip="192.168.0.101",
         #dcmd="echo",
         docker_args={
@@ -88,7 +88,16 @@ if __name__ == "__main__":
         },
     )
 
-    info("*** Adding switch and links\n")
+    info("*** Adding switch\n")
+
+    s1 = net.addSwitch("s1")
+    s2 = net.addSwitch("s2")
+
+    info("*** Adding links\n")
+
+    net.addLink(gnb,  s1, bw=1000, delay="1ms", intfName1="gnb-s1",  intfName2="s1-gnb")
+    net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
+    net.addLink(core,  s2, bw=1000, delay="1ms", intfName1="core-s2",  intfName2="s2-core")
 
     info("\n*** Starting network\n")
     net.start()

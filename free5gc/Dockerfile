@@ -18,19 +18,22 @@ RUN apt-get clean
 
 # Get Free5GC
 RUN cd $GOPATH/src \
-    && git clone --recursive -b v3.1.1 -j `nproc` https://github.com/free5gc/free5gc.git
+    && git clone --recursive -b v3.2.1 -j `nproc` https://github.com/free5gc/free5gc.git
 
 # Build Free5GC NFs & WebUI
 RUN cd $GOPATH/src/free5gc \
     && make all
 
-# Alpine is used for debug purpose. You can use scratch for a smaller footprint.
+# Final image
 FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    	bash \
+    	iproute2 \
+    	nano \
         curl \
         net-tools \
         tcpdump \

@@ -1,0 +1,15 @@
+time="2022-11-29T15:41:00Z" level=info msg="config version [1.0.3]" category=CFG component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="AMF Log level is set to [info] level" category=Init component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="set log level : info" category=NAS component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set report call : false" category=NAS component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set log level : info" category=NGAP component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set report call : false" category=NGAP component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set log level : info" category=FSM component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set report call : false" category=FSM component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set log level : info" category=Aper component=LIB
+time="2022-11-29T15:41:00Z" level=info msg="set report call : false" category=Aper component=LIB
+time="2022-11-29T15:41:00Z" level=info msg=amf category=App component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="AMF version:  \n\tfree5GC version: v3.1.1\n\tbuild time:      2022-11-23T15:41:23Z\n\tcommit hash:     03f9848e\n\tcommit time:     2022-04-07T14:37:30Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="Server started" category=Init component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="amfconfig Info: Version[1.0.3] Description[AMF initial local configuration]" category=Util component=AMF
+time="2022-11-29T15:41:00Z" level=info msg="Listen on 127.0.0.18:38412" category=NGAP component=AMF
