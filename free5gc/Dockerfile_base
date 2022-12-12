@@ -1,0 +1,52 @@
+FROM ubuntu:focal
+
+LABEL maintainer="Free5GC <support@free5gc.org>"
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        bash \
+        wget \
+        iproute2 \
+        nano \
+        curl \
+        git \
+        net-tools \
+        tcpdump \
+        iptables \
+        mongodb \
+        iperf3 && \
+    apt-get autoremove -y && apt-get autoclean
+
+# Install dependencies
+RUN apt-get update \
+    && apt-get -y install gcc cmake autoconf libtool pkg-config libmnl-dev libyaml-dev apt-transport-https ca-certificates \
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+    && apt-get update \
+    && apt-get install -y nodejs yarn
+
+# Install go
+RUN wget https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz \
+    && tar -C /usr/local -zxvf go1.14.4.linux-amd64.tar.gz \
+    && mkdir -p ~/go/{bin,pkg,src} \
+    && echo 'export GOPATH=$HOME/go' >> ~/.bashrc \
+    && echo 'export GOROOT=/usr/local/go' >> ~/.bashrc \
+    && echo 'export PATH=$PATH:$GOPATH/bin:$GOROOT/bin' >> ~/.bashrc \
+    && echo 'export GO111MODULE=auto' >> ~/.bashrc \
+    && . ~/.bashrc
+
+# Clean apt cache
+RUN apt-get clean
+
+# Get Free5GC
+RUN cd ~ \
+    && git clone --recursive -b v3.2.1 -j `nproc` https://github.com/free5gc/free5gc.git
+
+# Build Free5GC NFs & WebUI
+RUN cd ~/free5gc \
+    && make all
+
+WORKDIR ~/free5gc

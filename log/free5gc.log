@@ -86,3 +86,279 @@ time="2022-11-29T15:41:02Z" level=info msg="urilist update" category=MGMT compon
 time="2022-11-29T15:41:02Z" level=info msg="Create NF Profile" category=MGMT component=NRF
 time="2022-11-29T15:41:02Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/cdcd27a3-0904-43cd-8579-358ddbbc6799" category=MGMT component=NRF
 time="2022-11-29T15:41:02Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/cdcd27a3-0904-43cd-8579-358ddbbc6799 | " category=GIN component=NRF
+time="2022-12-07T16:13:13Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:13:13Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:13:13Z" level=warning msg="Error args: flag provided but not defined: -c" category=App component=WebUI
+time="2022-12-07T16:13:58Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:13:58Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:14:15Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:14:15Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:14:15Z" level=info msg="WebUI Log level is set to [trace] level" category=Init component=WebUI
+time="2022-12-07T16:14:15Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-07T16:14:45Z" level=fatal msg="context deadline exceeded" category=MonDB component=LIB
+time="2022-12-07T16:16:24Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:16:24Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:16:24Z" level=info msg="WebUI Log level is set to [trace] level" category=Init component=WebUI
+time="2022-12-07T16:16:24Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-07T16:16:32Z" level=info msg="| 200 |      172.17.0.1 | GET     | / | " category=GIN component=WebUI
+time="2022-12-07T16:16:33Z" level=info msg="| 200 |      172.17.0.1 | GET     | /static/js/main.2e5a1ef9.js | " category=GIN component=WebUI
+time="2022-12-07T16:16:36Z" level=info msg="| 200 |      172.17.0.1 | GET     | /static/media/free5gc_logo.adcdb325.png | " category=GIN component=WebUI
+time="2022-12-07T16:16:37Z" level=info msg="| 200 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:16:37Z" level=info msg="| 200 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:16:37Z" level=info msg="| 301 |      172.17.0.1 | GET     | /index.html?_sw-precache=11f9b501a3303da6ae60a1378cb4f854 | " category=GIN component=WebUI
+time="2022-12-07T16:16:37Z" level=info msg="| 404 |      172.17.0.1 | GET     | /?_sw-precache=11f9b501a3303da6ae60a1378cb4f854 | " category=GIN component=WebUI
+time="2022-12-07T16:22:13Z" level=info msg="| 200 |      172.17.0.1 | GET     | /static/media/Pe-icon-7-stroke.b38ef310.woff | " category=GIN component=WebUI
+time="2022-12-07T16:22:13Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-07T16:22:13Z" level=error msg="Get \"http://127.0.0.18:8000/namf-oam/v1/registered-ue-context\": dial tcp 127.0.0.18:8000: connect: connection refused" category=WebUI component=WebUI
+time="2022-12-07T16:22:13Z" level=info msg="| 500 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI
+time="2022-12-07T16:30:22Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:30:22Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:30:22Z" level=info msg="WebUI Log level is set to [trace] level" category=Init component=WebUI
+time="2022-12-07T16:30:22Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-07T16:31:28Z" level=info msg="NRF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:49:08Z\n\tcommit hash:     386a6bdd\n\tcommit time:     2021-01-30T15:57:26Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NRF
+time="2022-12-07T16:31:28Z" level=error msg="NRF Run Error: flag provided but not defined: -c" category=App component=NRF
+time="2022-12-07T16:31:28Z" level=info msg=amf category=App component=AMF
+time="2022-12-07T16:31:28Z" level=info msg="AMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:46:13Z\n\tcommit hash:     452f43a6\n\tcommit time:     2021-01-30T15:33:15Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AMF
+time="2022-12-07T16:31:28Z" level=error msg="AMF Run error: flag provided but not defined: -c" category=App component=AMF
+time="2022-12-07T16:31:28Z" level=info msg="SMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:33Z\n\tcommit hash:     04c01ec5\n\tcommit time:     2021-01-30T17:01:30Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=SMF
+time="2022-12-07T16:31:28Z" level=error msg="SMF Run error: flag provided but not defined: -c" category=App component=SMF
+time="2022-12-07T16:31:28Z" level=info msg=udr category=App component=UDR
+time="2022-12-07T16:31:28Z" level=info msg="UDR version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:53Z\n\tcommit hash:     d634e21e\n\tcommit time:     2021-01-30T17:13:49Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDR
+time="2022-12-07T16:31:28Z" level=error msg="UDR Run error: flag provided but not defined: -c" category=App component=UDR
+time="2022-12-07T16:31:29Z" level=info msg="PCF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:24Z\n\tcommit hash:     fed73727\n\tcommit time:     2021-01-30T16:47:50Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=PCF
+time="2022-12-07T16:31:29Z" level=error msg="PCF Run Error: flag provided but not defined: -c" category=App component=PCF
+time="2022-12-07T16:31:29Z" level=info msg="UDM version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:45Z\n\tcommit hash:     e89dcbf1\n\tcommit time:     2021-01-30T17:09:19Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDM
+time="2022-12-07T16:31:29Z" level=error msg="UDM Run error: flag provided but not defined: -c" category=App component=UDM
+time="2022-12-07T16:31:29Z" level=info msg="NSSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:17Z\n\tcommit hash:     51759368\n\tcommit time:     2021-01-30T16:03:22Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NSSF
+time="2022-12-07T16:31:29Z" level=error msg="NSSF Run Error: flag provided but not defined: -c" category=App component=NSSF
+time="2022-12-07T16:31:29Z" level=info msg="AUSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:48:39Z\n\tcommit hash:     048e447a\n\tcommit time:     2021-01-30T15:36:12Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AUSF
+time="2022-12-07T16:31:29Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:31:29Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:31:29Z" level=error msg="AUSF Run error: flag provided but not defined: -c" category=App component=AUSF
+time="2022-12-07T16:31:29Z" level=warning msg="Error args: flag provided but not defined: -c" category=App component=WebUI
+time="2022-12-07T16:36:22Z" level=info msg="NRF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:49:08Z\n\tcommit hash:     386a6bdd\n\tcommit time:     2021-01-30T15:57:26Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NRF
+time="2022-12-07T16:36:22Z" level=info msg="NRF Log level is set to [info] level" category=Init component=NRF
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.1], but expected is [1.0.0]." category=CFG component=NRF
+time="2022-12-07T16:36:22Z" level=error msg="NRF Run Error: Failed to initialize !!" category=App component=NRF
+time="2022-12-07T16:36:22Z" level=info msg=amf category=App component=AMF
+time="2022-12-07T16:36:22Z" level=info msg="AMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:46:13Z\n\tcommit hash:     452f43a6\n\tcommit time:     2021-01-30T15:33:15Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AMF
+time="2022-12-07T16:36:22Z" level=info msg="AMF Log level is set to [info] level" category=Init component=AMF
+time="2022-12-07T16:36:22Z" level=info msg="set log level : info" category=NAS component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set report call : false" category=NAS component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set log level : info" category=NGAP component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set report call : false" category=NGAP component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set log level : info" category=FSM component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set report call : false" category=FSM component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set log level : info" category=Aper component=LIB
+time="2022-12-07T16:36:22Z" level=info msg="set report call : false" category=Aper component=LIB
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.3], but expected is [1.0.0]." category=CFG component=AMF
+time="2022-12-07T16:36:22Z" level=error msg="AMF Run error: Failed to initialize !!" category=App component=AMF
+time="2022-12-07T16:36:22Z" level=info msg="SMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:33Z\n\tcommit hash:     04c01ec5\n\tcommit time:     2021-01-30T17:01:30Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=SMF
+time="2022-12-07T16:36:22Z" level=error msg="yaml: unmarshal errors:\n  line 6: cannot unmarshal !!map into []*factory.UERoutingInfo" category=CFG component=SMF
+time="2022-12-07T16:36:22Z" level=error msg="SMF Run error: Failed to initialize !!" category=App component=SMF
+time="2022-12-07T16:36:22Z" level=info msg=udr category=App component=UDR
+time="2022-12-07T16:36:22Z" level=info msg="UDR version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:53Z\n\tcommit hash:     d634e21e\n\tcommit time:     2021-01-30T17:13:49Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDR
+time="2022-12-07T16:36:22Z" level=info msg="UDR Log level is set to [info] level" category=Init component=UDR
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.1], but expected is [1.0.0]." category=CFG component=UDR
+time="2022-12-07T16:36:22Z" level=error msg="UDR Run error: Failed to initialize !!" category=App component=UDR
+time="2022-12-07T16:36:22Z" level=info msg="PCF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:24Z\n\tcommit hash:     fed73727\n\tcommit time:     2021-01-30T16:47:50Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=PCF
+time="2022-12-07T16:36:22Z" level=info msg="PCF Log level is set to [info] level" category=Init component=PCF
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.1], but expected is [1.0.0]." category=CFG component=PCF
+time="2022-12-07T16:36:22Z" level=error msg="PCF Run Error: Failed to initialize !!" category=App component=PCF
+time="2022-12-07T16:36:22Z" level=info msg="UDM version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:45Z\n\tcommit hash:     e89dcbf1\n\tcommit time:     2021-01-30T17:09:19Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDM
+time="2022-12-07T16:36:22Z" level=info msg="UDM Log level is set to [info] level" category=Init component=UDM
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.2], but expected is [1.0.0]." category=CFG component=UDM
+time="2022-12-07T16:36:22Z" level=error msg="UDM Run error: Failed to initialize !!" category=App component=UDM
+time="2022-12-07T16:36:22Z" level=info msg="NSSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:17Z\n\tcommit hash:     51759368\n\tcommit time:     2021-01-30T16:03:22Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NSSF
+time="2022-12-07T16:36:22Z" level=info msg="NSSF Log level is set to [info] level" category=Init component=NSSF
+time="2022-12-07T16:36:22Z" level=error msg="config version is [1.0.1], but expected is [1.0.0]." category=CFG component=NSSF
+time="2022-12-07T16:36:22Z" level=error msg="NSSF Run Error: Failed to initialize !!" category=App component=NSSF
+time="2022-12-07T16:36:23Z" level=info msg="AUSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:48:39Z\n\tcommit hash:     048e447a\n\tcommit time:     2021-01-30T15:36:12Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AUSF
+time="2022-12-07T16:36:23Z" level=info msg="AUSF Log level is set to [info] level" category=Init component=AUSF
+time="2022-12-07T16:36:23Z" level=error msg="config version is [1.0.2], but expected is [1.0.0]." category=CFG component=AUSF
+time="2022-12-07T16:36:23Z" level=error msg="AUSF Run error: Failed to initialize !!" category=App component=AUSF
+time="2022-12-07T16:36:23Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:36:23Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:36:23Z" level=info msg="WebUI Log level is set to [trace] level" category=Init component=WebUI
+time="2022-12-07T16:36:23Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-07T16:36:23Z" level=info msg="listen tcp :5000: bind: address already in use" category=Init component=WebUI
+time="2022-12-07T16:36:37Z" level=info msg="| 304 |      172.17.0.1 | GET     | / | " category=GIN component=WebUI
+time="2022-12-07T16:36:37Z" level=info msg="| 304 |      172.17.0.1 | GET     | /static/js/main.2e5a1ef9.js | " category=GIN component=WebUI
+time="2022-12-07T16:36:40Z" level=info msg="| 304 |      172.17.0.1 | GET     | /static/media/free5gc_logo.adcdb325.png | " category=GIN component=WebUI
+time="2022-12-07T16:36:41Z" level=info msg="| 304 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:36:41Z" level=info msg="| 200 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:36:42Z" level=info msg="| 404 |      172.17.0.1 | GET     | /?_sw-precache=11f9b501a3303da6ae60a1378cb4f854 | " category=GIN component=WebUI
+time="2022-12-07T16:36:44Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-07T16:36:44Z" level=error msg="Get \"http://127.0.0.18:8000/namf-oam/v1/registered-ue-context\": dial tcp 127.0.0.18:8000: connect: connection refused" category=WebUI component=WebUI
+time="2022-12-07T16:36:44Z" level=info msg="| 500 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI
+time="2022-12-07T16:36:48Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-07T16:36:48Z" level=error msg="Get \"http://127.0.0.18:8000/namf-oam/v1/registered-ue-context\": dial tcp 127.0.0.18:8000: connect: connection refused" category=WebUI component=WebUI
+time="2022-12-07T16:36:48Z" level=info msg="| 500 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI
+time="2022-12-07T16:36:49Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-07T16:36:49Z" level=error msg="Get \"http://127.0.0.18:8000/namf-oam/v1/registered-ue-context\": dial tcp 127.0.0.18:8000: connect: connection refused" category=WebUI component=WebUI
+time="2022-12-07T16:36:49Z" level=info msg="| 500 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI
+time="2022-12-07T16:54:22Z" level=info msg="NRF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:49:08Z\n\tcommit hash:     386a6bdd\n\tcommit time:     2021-01-30T15:57:26Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="NRF Log level is set to [info] level" category=Init component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=MonDB component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=MonDB component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="config version [1.0.0]" category=CFG component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="Server started" category=Init component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="nrfconfig Info: Version[1.0.0] Description[NRF initial local configuration]" category=Init component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="Binding addr: [127.0.0.10:8000]" category=Init component=NRF
+time="2022-12-07T16:54:22Z" level=info msg=amf category=App component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="AMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:46:13Z\n\tcommit hash:     452f43a6\n\tcommit time:     2021-01-30T15:33:15Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="AMF Log level is set to [info] level" category=Init component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=NAS component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=NAS component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=NGAP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=NGAP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=FSM component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=FSM component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=Aper component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=Aper component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="config version [1.0.0]" category=CFG component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="Server started" category=Init component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="amfconfig Info: Version[1.0.0] Description[AMF initial local configuration]" category=Util component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/2a83cf58-90ec-4c7a-9730-58df3723705e" category=MGMT component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/2a83cf58-90ec-4c7a-9730-58df3723705e | " category=GIN component=NRF
+time="2022-12-07T16:54:22Z" level=info msg="Listen on 127.0.0.1:38412" category=NGAP component=AMF
+time="2022-12-07T16:54:22Z" level=info msg="SMF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:33Z\n\tcommit hash:     04c01ec5\n\tcommit time:     2021-01-30T17:01:30Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="SMF Log level is set to [info] level" category=Init component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=NAS component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=NAS component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=NGAP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=NGAP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=Aper component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=Aper component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set log level : info" category=PFCP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="set report call : false" category=PFCP component=LIB
+time="2022-12-07T16:54:22Z" level=info msg="SMF config version [1.0.0]" category=CFG component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="UE-Routing config version [1.0.0]" category=CFG component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="smfconfig Info: Version[1.0.0] Description[SMF initial local configuration]" category=CTX component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="Endpoints: [127.0.0.8]" category=CTX component=SMF
+time="2022-12-07T16:54:22Z" level=info msg="Server started" category=Init component=SMF
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg=udr category=App component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="UDR version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:53Z\n\tcommit hash:     d634e21e\n\tcommit time:     2021-01-30T17:13:49Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="UDR Log level is set to [info] level" category=Init component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=MonDB component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=MonDB component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="config version [1.0.0]" category=CFG component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="UDR Config Info: Version[1.0.0] Description[UDR initial local configuration]" category=Init component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="urilist create" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/6d1d7c40-24ae-4721-8470-b2881c80e48d" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/6d1d7c40-24ae-4721-8470-b2881c80e48d | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="SMF Registration to NRF {6d1d7c40-24ae-4721-8470-b2881c80e48d SMF REGISTERED 0 0xc0003a9780 0xc0003a97c0 [] []   [127.0.0.2] [] <nil> [] [] <nil> 0 0 0  <nil> <nil> <nil> <nil> 0xc000371140 <nil> <nil> <nil> <nil> <nil> map[] <nil> false 0xc0003a9600 false false []}" category=Init component=SMF
+time="2022-12-07T16:54:23Z" level=info msg="udrconfig Info: Version[1.0.0] Description[UDR initial local configuration]" category=Util component=UDR
+time="2022-12-07T16:54:23Z" level=info msg="Listen on 127.0.0.1:8805" category=PFCP component=SMF
+time="2022-12-07T16:54:23Z" level=info msg="Send PFCP Association Request to UPF[127.0.0.8]\n" category=App component=SMF
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="PCF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:24Z\n\tcommit hash:     fed73727\n\tcommit time:     2021-01-30T16:47:50Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=PCF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/eebb1dff-f877-4707-8ace-b831da705284" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/eebb1dff-f877-4707-8ace-b831da705284 | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="PCF Log level is set to [info] level" category=Init component=PCF
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="config version [1.0.0]" category=CFG component=PCF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=PCF
+time="2022-12-07T16:54:23Z" level=info msg="pcfconfig Info: Version[1.0.0] Description[PCF initial local configuration]" category=Util component=PCF
+time="2022-12-07T16:54:23Z" level=info msg="UDM version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:45Z\n\tcommit hash:     e89dcbf1\n\tcommit time:     2021-01-30T17:09:19Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="UDM Log level is set to [info] level" category=Init component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="config version [1.0.0]" category=CFG component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="UDM Config Info: Version[1.0.0] Description[UDM initial local configuration]" category=Init component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/9dbaebbd-1931-4767-a36f-2ce92e702604" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="udmconfig Info: Version[1.0.0] Description[UDM initial local configuration]" category=Util component=UDM
+time="2022-12-07T16:54:23Z" level=info msg="NSSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:50:17Z\n\tcommit hash:     51759368\n\tcommit time:     2021-01-30T16:03:22Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=NSSF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/9dbaebbd-1931-4767-a36f-2ce92e702604 | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFDiscoveryRequest" category=DSCV component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="NSSF Log level is set to [info] level" category=Init component=NSSF
+time="2022-12-07T16:54:23Z" level=info msg="| 200 |       127.0.0.1 | GET     | /nnrf-disc/v1/nf-instances?requester-nf-type=PCF&service-names=nudr-dr&target-nf-type=UDR | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="config version [1.0.0]" category=CFG component=NSSF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=NSSF
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/bfd3b8f8-3f7c-4e44-93f1-9df9b6802898" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/bfd3b8f8-3f7c-4e44-93f1-9df9b6802898 | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/9efce683-154f-4ee7-9c77-f270a183fbe3" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/9efce683-154f-4ee7-9c77-f270a183fbe3 | " category=GIN component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="AUSF version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:48:39Z\n\tcommit hash:     048e447a\n\tcommit time:     2021-01-30T15:36:12Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AUSF
+time="2022-12-07T16:54:23Z" level=info msg=webui category=App component=WebUI
+time="2022-12-07T16:54:23Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-07T16:54:23Z" level=info msg="AUSF Log level is set to [info] level" category=Init component=AUSF
+time="2022-12-07T16:54:23Z" level=info msg="set log level : info" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="set report call : false" category=OAPI component=LIB
+time="2022-12-07T16:54:23Z" level=info msg="config version [1.0.0]" category=CFG component=AUSF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=AUSF
+time="2022-12-07T16:54:23Z" level=warning msg="Webconsole config without log level setting!!!" category=Init component=WebUI
+time="2022-12-07T16:54:23Z" level=info msg="ausfconfig Info: Version[1.0.0] Description[AUSF initial local configuration]\n" category=Init component=AUSF
+time="2022-12-07T16:54:23Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-07T16:54:23Z" level=info msg="Handle NFRegisterRequest" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="urilist update" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Create NF Profile" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="Location header:  http://127.0.0.10:8000/nnrf-nfm/v1/nf-instances/f24b444b-c1df-434d-8ba8-fa2fff342093" category=MGMT component=NRF
+time="2022-12-07T16:54:23Z" level=info msg="| 201 |       127.0.0.1 | PUT     | /nnrf-nfm/v1/nf-instances/f24b444b-c1df-434d-8ba8-fa2fff342093 | " category=GIN component=NRF
+time="2022-12-07T16:54:32Z" level=info msg="Remove Request Transaction [1]\n" category=PFCP component=LIB
+time="2022-12-07T16:54:56Z" level=info msg="| 304 |      172.17.0.1 | GET     | / | " category=GIN component=WebUI
+time="2022-12-07T16:54:57Z" level=info msg="| 304 |      172.17.0.1 | GET     | /static/js/main.2e5a1ef9.js | " category=GIN component=WebUI
+time="2022-12-07T16:55:00Z" level=info msg="| 304 |      172.17.0.1 | GET     | /static/media/free5gc_logo.adcdb325.png | " category=GIN component=WebUI
+time="2022-12-07T16:55:01Z" level=info msg="| 304 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:55:02Z" level=info msg="| 200 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-07T16:55:03Z" level=info msg="| 404 |      172.17.0.1 | GET     | /?_sw-precache=11f9b501a3303da6ae60a1378cb4f854 | " category=GIN component=WebUI
+time="2022-12-07T16:55:04Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-07T16:55:04Z" level=info msg="[OAM] Handle Registered UE Context" category=Producer component=AMF
+time="2022-12-07T16:55:04Z" level=info msg="| 200 |       127.0.0.1 | GET     | /namf-oam/v1/registered-ue-context | " category=GIN component=AMF
+time="2022-12-07T16:55:04Z" level=info msg="| 200 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI
+time="2022-12-07T16:55:45Z" level=info msg="Get All Subscribers List" category=WebUI component=WebUI
+time="2022-12-07T16:55:45Z" level=info msg="| 200 |      172.17.0.1 | GET     | /api/subscriber | " category=GIN component=WebUI
+time="2022-12-07T16:56:20Z" level=info msg="Post One Subscriber Data" category=WebUI component=WebUI
+time="2022-12-07T16:56:21Z" level=info msg="| 201 |      172.17.0.1 | POST    | /api/subscriber/imsi-208930000000003/20893 | " category=GIN component=WebUI
+time="2022-12-07T16:56:21Z" level=info msg="Get All Subscribers List" category=WebUI component=WebUI
+time="2022-12-07T16:56:21Z" level=info msg="| 200 |      172.17.0.1 | GET     | /api/subscriber | " category=GIN component=WebUI
+time="2022-12-12T15:14:30Z" level=info msg=webui category=App component=WebUI
+time="2022-12-12T15:14:30Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-12T15:14:30Z" level=warning msg="Webconsole config without log level setting!!!" category=Init component=WebUI
+time="2022-12-12T15:14:30Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-12T15:15:00Z" level=fatal msg="server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: localhost:27017, Type: Unknown, State: Connected, Average RTT: 0, Last error: connection() : dial tcp 127.0.0.1:27017: connect: connection refused }, ] }" category=MonDB component=LIB
+time="2022-12-12T15:38:17Z" level=info msg=webui category=App component=WebUI
+time="2022-12-12T15:38:17Z" level=info msg="webconsole version:  \n\tfree5GC version: v3.0.5\n\tbuild time:      2022-12-07T15:54:44Z\n\tcommit hash:     d176304c\n\tcommit time:     2021-01-31T17:55:01Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=WebUI
+time="2022-12-12T15:38:17Z" level=warning msg="Webconsole config without log level setting!!!" category=Init component=WebUI
+time="2022-12-12T15:38:17Z" level=info msg="Server started" category=Init component=WebUI
+time="2022-12-12T15:39:05Z" level=info msg="| 200 |      172.17.0.1 | GET     | / | " category=GIN component=WebUI
+time="2022-12-12T15:39:06Z" level=info msg="| 304 |      172.17.0.1 | GET     | /static/js/main.2e5a1ef9.js | " category=GIN component=WebUI
+time="2022-12-12T15:39:08Z" level=info msg="| 200 |      172.17.0.1 | GET     | /favicon.ico | " category=GIN component=WebUI
+time="2022-12-12T15:39:09Z" level=info msg="| 200 |      172.17.0.1 | GET     | /static/media/free5gc_logo.adcdb325.png | " category=GIN component=WebUI
+time="2022-12-12T15:39:10Z" level=info msg="| 304 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-12T15:39:10Z" level=info msg="| 200 |      172.17.0.1 | GET     | /service-worker.js | " category=GIN component=WebUI
+time="2022-12-12T15:39:11Z" level=info msg="| 404 |      172.17.0.1 | GET     | /?_sw-precache=11f9b501a3303da6ae60a1378cb4f854 | " category=GIN component=WebUI
+time="2022-12-12T15:39:18Z" level=info msg="Get All Subscribers List" category=WebUI component=WebUI
+time="2022-12-12T15:39:18Z" level=info msg="| 200 |      172.17.0.1 | GET     | /api/subscriber | " category=GIN component=WebUI
+time="2022-12-12T15:39:20Z" level=info msg="Get Registered UE Context" category=WebUI component=WebUI
+time="2022-12-12T15:39:20Z" level=error msg="Get \"http://127.0.0.18:8000/namf-oam/v1/registered-ue-context\": dial tcp 127.0.0.18:8000: connect: connection refused" category=WebUI component=WebUI
+time="2022-12-12T15:39:20Z" level=info msg="| 500 |      172.17.0.1 | GET     | /api/registered-ue-context | " category=GIN component=WebUI

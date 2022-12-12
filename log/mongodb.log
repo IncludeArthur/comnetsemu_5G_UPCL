@@ -1,82 +1,133 @@
-2022-11-29T15:40:48.023+0000 I CONTROL  [initandlisten] MongoDB starting : pid=45 port=27017 dbpath=/free5gc/mongodb 64-bit host=core
-2022-11-29T15:40:48.023+0000 I CONTROL  [initandlisten] db version v3.6.8
-2022-11-29T15:40:48.023+0000 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
-2022-11-29T15:40:48.023+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
-2022-11-29T15:40:48.023+0000 I CONTROL  [initandlisten] allocator: tcmalloc
-2022-11-29T15:40:48.024+0000 I CONTROL  [initandlisten] modules: none
-2022-11-29T15:40:48.024+0000 I CONTROL  [initandlisten] build environment:
-2022-11-29T15:40:48.024+0000 I CONTROL  [initandlisten]     distarch: x86_64
-2022-11-29T15:40:48.024+0000 I CONTROL  [initandlisten]     target_arch: x86_64
-2022-11-29T15:40:48.024+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true }, storage: { dbPath: "/free5gc/mongodb" }, systemLog: { destination: "file", logAppend: true, logRotate: "reopen", path: "/free5gc/log/mongodb.log" } }
-2022-11-29T15:40:48.024+0000 W -        [initandlisten] Detected unclean shutdown - /free5gc/mongodb/mongod.lock is not empty.
-2022-11-29T15:40:48.025+0000 I -        [initandlisten] Detected data files in /free5gc/mongodb created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
-2022-11-29T15:40:48.025+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
-2022-11-29T15:40:48.025+0000 I STORAGE  [initandlisten] 
-2022-11-29T15:40:48.025+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
-2022-11-29T15:40:48.026+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
-2022-11-29T15:40:48.026+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1449M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
-2022-11-29T15:40:49.092+0000 I STORAGE  [initandlisten] WiredTiger message [1669736449:92920][45:0x7f237078eac0], txn-recover: Main recovery loop: starting at 5/15232
-2022-11-29T15:40:49.093+0000 I STORAGE  [initandlisten] WiredTiger message [1669736449:93655][45:0x7f237078eac0], txn-recover: Recovering log 5 through 6
-2022-11-29T15:40:49.175+0000 I STORAGE  [initandlisten] WiredTiger message [1669736449:175169][45:0x7f237078eac0], file:sizeStorer.wt, txn-recover: Recovering log 6 through 6
-2022-11-29T15:40:49.239+0000 I STORAGE  [initandlisten] WiredTiger message [1669736449:238994][45:0x7f237078eac0], file:sizeStorer.wt, txn-recover: Set global recovery timestamp: 0
-2022-11-29T15:40:49.412+0000 I CONTROL  [initandlisten] 
-2022-11-29T15:40:49.413+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
-2022-11-29T15:40:49.413+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-2022-11-29T15:40:49.413+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
-2022-11-29T15:40:49.413+0000 I CONTROL  [initandlisten] 
-2022-11-29T15:40:49.557+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/free5gc/mongodb/diagnostic.data'
-2022-11-29T15:40:49.561+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
-2022-11-29T15:40:50.076+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
-2022-11-29T15:41:00.266+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54916 #1 (1 connection now open)
-2022-11-29T15:41:00.286+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54930 #2 (2 connections now open)
-2022-11-29T15:41:00.328+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:54930 conn2: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:00.334+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:54916 conn1: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:00.850+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54940 #3 (3 connections now open)
-2022-11-29T15:41:00.915+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54948 #4 (4 connections now open)
-2022-11-29T15:41:00.918+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:54940 conn3: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:00.930+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54958 #5 (5 connections now open)
-2022-11-29T15:41:00.950+0000 I NETWORK  [conn4] received client metadata from 127.0.0.1:54948 conn4: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:00.986+0000 I NETWORK  [conn5] received client metadata from 127.0.0.1:54958 conn5: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:01.182+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54972 #6 (6 connections now open)
-2022-11-29T15:41:01.225+0000 I NETWORK  [conn6] received client metadata from 127.0.0.1:54972 conn6: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:01.630+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54982 #7 (7 connections now open)
-2022-11-29T15:41:01.631+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:54998 #8 (8 connections now open)
-2022-11-29T15:41:01.663+0000 I NETWORK  [conn8] received client metadata from 127.0.0.1:54998 conn8: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:01.671+0000 I NETWORK  [conn7] received client metadata from 127.0.0.1:54982 conn7: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:48.323+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:39464 #9 (9 connections now open)
-2022-11-29T15:41:48.324+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:39472 #10 (10 connections now open)
-2022-11-29T15:41:48.325+0000 I NETWORK  [conn10] received client metadata from 127.0.0.1:39472 conn10: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:48.326+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:39482 #11 (11 connections now open)
-2022-11-29T15:41:48.327+0000 I NETWORK  [conn9] received client metadata from 127.0.0.1:39464 conn9: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:41:48.327+0000 I NETWORK  [conn11] received client metadata from 127.0.0.1:39482 conn11: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T15:43:16.318+0000 I NETWORK  [conn11] end connection 127.0.0.1:39482 (10 connections now open)
-2022-11-29T15:43:16.321+0000 I NETWORK  [conn10] end connection 127.0.0.1:39472 (9 connections now open)
-2022-11-29T15:43:16.330+0000 I NETWORK  [conn9] end connection 127.0.0.1:39464 (8 connections now open)
-2022-11-29T16:45:06.986+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:44394 #12 (9 connections now open)
-2022-11-29T16:45:06.987+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:44398 #13 (10 connections now open)
-2022-11-29T16:45:07.007+0000 I NETWORK  [conn13] received client metadata from 127.0.0.1:44398 conn13: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:45:07.010+0000 I NETWORK  [conn12] received client metadata from 127.0.0.1:44394 conn12: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:45:07.017+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:44414 #14 (11 connections now open)
-2022-11-29T16:45:07.018+0000 I NETWORK  [conn14] received client metadata from 127.0.0.1:44414 conn14: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:57:47.984+0000 I NETWORK  [conn14] end connection 127.0.0.1:44414 (10 connections now open)
-2022-11-29T16:57:47.985+0000 I NETWORK  [conn13] end connection 127.0.0.1:44398 (9 connections now open)
-2022-11-29T16:57:47.986+0000 I NETWORK  [conn12] end connection 127.0.0.1:44394 (8 connections now open)
-2022-11-29T16:57:52.487+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:47436 #15 (9 connections now open)
-2022-11-29T16:57:52.488+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:47444 #16 (10 connections now open)
-2022-11-29T16:57:52.493+0000 I NETWORK  [conn15] received client metadata from 127.0.0.1:47436 conn15: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:57:52.497+0000 I NETWORK  [conn16] received client metadata from 127.0.0.1:47444 conn16: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:57:52.498+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:47446 #17 (11 connections now open)
-2022-11-29T16:57:52.499+0000 I NETWORK  [conn17] received client metadata from 127.0.0.1:47446 conn17: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:58:38.617+0000 I NETWORK  [conn17] end connection 127.0.0.1:47446 (10 connections now open)
-2022-11-29T16:58:38.617+0000 I NETWORK  [conn16] end connection 127.0.0.1:47444 (9 connections now open)
-2022-11-29T16:58:38.618+0000 I NETWORK  [conn15] end connection 127.0.0.1:47436 (8 connections now open)
-2022-11-29T16:58:42.426+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:45424 #18 (9 connections now open)
-2022-11-29T16:58:42.427+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:45426 #19 (10 connections now open)
-2022-11-29T16:58:42.427+0000 I NETWORK  [conn18] received client metadata from 127.0.0.1:45424 conn18: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:58:42.427+0000 I NETWORK  [conn19] received client metadata from 127.0.0.1:45426 conn19: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:58:42.429+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:45436 #20 (11 connections now open)
-2022-11-29T16:58:42.429+0000 I NETWORK  [conn20] received client metadata from 127.0.0.1:45436 conn20: { driver: { name: "mongo-go-driver", version: "v1.7.1" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
-2022-11-29T16:59:03.548+0000 I NETWORK  [conn20] end connection 127.0.0.1:45436 (10 connections now open)
-2022-11-29T16:59:03.550+0000 I NETWORK  [conn19] end connection 127.0.0.1:45426 (8 connections now open)
-2022-11-29T16:59:03.550+0000 I NETWORK  [conn18] end connection 127.0.0.1:45424 (9 connections now open)
-2022-11-30T14:47:51.195+0000 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 406ms
+2022-12-01T17:00:06.824+0000 I CONTROL  [initandlisten] MongoDB starting : pid=43 port=27017 dbpath=/free5gc/mongodb 64-bit host=core
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] db version v3.2.11
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] git version: 009580ad490190ba33d1c6253ebd8d91808923e4
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2u  20 Dec 2019
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] modules: none
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] build environment:
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-12-01T17:00:06.825+0000 I CONTROL  [initandlisten] options: { storage: { dbPath: "/free5gc/mongodb" }, systemLog: { destination: "file", path: "/free5gc/log/mongodb.log" } }
+2022-12-01T17:00:06.832+0000 I -        [initandlisten] Detected data files in /free5gc/mongodb created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2022-12-01T17:00:06.832+0000 W -        [initandlisten] Detected unclean shutdown - /free5gc/mongodb/mongod.lock is not empty.
+2022-12-01T17:00:06.832+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2022-12-01T17:00:06.833+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2022-12-01T17:00:06.892+0000 E STORAGE  [initandlisten] WiredTiger (-31802) [1669914006:892517][43:0x7f4e656b73c0], txn-recover: unsupported WiredTiger file version: this build  only supports major/minor versions up to 1/0,  and the file is version 2/0: WT_ERROR: non-specific WiredTiger error
+2022-12-01T17:00:06.892+0000 E STORAGE  [initandlisten] WiredTiger (0) [1669914006:892648][43:0x7f4e656b73c0], txn-recover: WiredTiger is unable to read the recovery log.
+2022-12-01T17:00:06.892+0000 E STORAGE  [initandlisten] WiredTiger (0) [1669914006:892723][43:0x7f4e656b73c0], txn-recover: This may be due to the log files being encrypted, being from an older version or due to corruption on disk
+2022-12-01T17:00:06.892+0000 E STORAGE  [initandlisten] WiredTiger (0) [1669914006:892765][43:0x7f4e656b73c0], txn-recover: You should confirm that you have opened the database with the correct options including all encryption and compression options
+2022-12-01T17:00:06.892+0000 E STORAGE  [initandlisten] WiredTiger (-31802) [1669914006:892800][43:0x7f4e656b73c0], txn-recover: Recovery failed: WT_ERROR: non-specific WiredTiger error
+2022-12-01T17:00:06.909+0000 I -        [initandlisten] Assertion: 28595:-31802: WT_ERROR: non-specific WiredTiger error
+2022-12-01T17:00:06.910+0000 I STORAGE  [initandlisten] exception in initAndListen: 28595 -31802: WT_ERROR: non-specific WiredTiger error, terminating
+2022-12-01T17:00:06.910+0000 I CONTROL  [initandlisten] dbexit:  rc: 100
+2022-12-07T16:31:17.267+0000 I CONTROL  [main] ***** SERVER RESTARTED *****
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] MongoDB starting : pid=113 port=27017 dbpath=/free5gc/mongodb 64-bit host=core
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] db version v3.6.8
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] modules: none
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] build environment:
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true }, storage: { dbPath: "/free5gc/mongodb" }, systemLog: { destination: "file", logAppend: true, logRotate: "reopen", path: "/free5gc/log/mongodb.log" } }
+2022-12-07T16:31:17.278+0000 I STORAGE  [initandlisten] exception in initAndListen: DBPathInUse: Unable to lock the lock file: /free5gc/mongodb/mongod.lock (Resource temporarily unavailable). Another mongod instance is already running on the /free5gc/mongodb directory, terminating
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] now exiting
+2022-12-07T16:31:17.278+0000 I CONTROL  [initandlisten] shutting down with code:100
+2022-12-07T16:54:11.521+0000 I CONTROL  [main] ***** SERVER RESTARTED *****
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] MongoDB starting : pid=35 port=27017 dbpath=/free5gc/mongodb 64-bit host=core
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] db version v3.6.8
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] modules: none
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] build environment:
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-12-07T16:54:11.530+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true }, storage: { dbPath: "/free5gc/mongodb" }, systemLog: { destination: "file", logAppend: true, logRotate: "reopen", path: "/free5gc/log/mongodb.log" } }
+2022-12-07T16:54:11.530+0000 W -        [initandlisten] Detected unclean shutdown - /free5gc/mongodb/mongod.lock is not empty.
+2022-12-07T16:54:11.531+0000 I -        [initandlisten] Detected data files in /free5gc/mongodb created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2022-12-07T16:54:11.531+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2022-12-07T16:54:11.531+0000 I STORAGE  [initandlisten] 
+2022-12-07T16:54:11.531+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2022-12-07T16:54:11.531+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2022-12-07T16:54:11.531+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1449M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2022-12-07T16:54:12.705+0000 I STORAGE  [initandlisten] WiredTiger message [1670432052:705519][35:0x7fd018c5cac0], txn-recover: Main recovery loop: starting at 11/12160
+2022-12-07T16:54:12.706+0000 I STORAGE  [initandlisten] WiredTiger message [1670432052:706178][35:0x7fd018c5cac0], txn-recover: Recovering log 11 through 12
+2022-12-07T16:54:12.776+0000 I STORAGE  [initandlisten] WiredTiger message [1670432052:776551][35:0x7fd018c5cac0], txn-recover: Recovering log 12 through 12
+2022-12-07T16:54:12.876+0000 I STORAGE  [initandlisten] WiredTiger message [1670432052:876422][35:0x7fd018c5cac0], txn-recover: Set global recovery timestamp: 0
+2022-12-07T16:54:13.007+0000 I CONTROL  [initandlisten] 
+2022-12-07T16:54:13.007+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-12-07T16:54:13.007+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-12-07T16:54:13.007+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2022-12-07T16:54:13.007+0000 I CONTROL  [initandlisten] 
+2022-12-07T16:54:13.067+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/free5gc/mongodb/diagnostic.data'
+2022-12-07T16:54:13.069+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+2022-12-07T16:54:14.090+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2022-12-07T16:54:22.660+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33126 #1 (1 connection now open)
+2022-12-07T16:54:22.660+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33138 #2 (2 connections now open)
+2022-12-07T16:54:22.660+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:33126 conn1: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:22.662+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:33138 conn2: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:22.776+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33150 #3 (3 connections now open)
+2022-12-07T16:54:22.777+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:33150 conn3: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.192+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33164 #4 (4 connections now open)
+2022-12-07T16:54:23.192+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33172 #5 (5 connections now open)
+2022-12-07T16:54:23.201+0000 I NETWORK  [conn5] received client metadata from 127.0.0.1:33172 conn5: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.205+0000 I NETWORK  [conn4] received client metadata from 127.0.0.1:33164 conn4: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.362+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33178 #6 (6 connections now open)
+2022-12-07T16:54:23.365+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33192 #7 (7 connections now open)
+2022-12-07T16:54:23.378+0000 I NETWORK  [conn7] received client metadata from 127.0.0.1:33192 conn7: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.381+0000 I NETWORK  [conn6] received client metadata from 127.0.0.1:33178 conn6: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.626+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33206 #8 (8 connections now open)
+2022-12-07T16:54:23.637+0000 I NETWORK  [conn8] received client metadata from 127.0.0.1:33206 conn8: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.797+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33208 #9 (9 connections now open)
+2022-12-07T16:54:23.799+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33218 #10 (10 connections now open)
+2022-12-07T16:54:23.809+0000 I NETWORK  [conn10] received client metadata from 127.0.0.1:33218 conn10: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.811+0000 I NETWORK  [conn9] received client metadata from 127.0.0.1:33208 conn9: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:54:23.816+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:33226 #11 (11 connections now open)
+2022-12-07T16:54:23.818+0000 I NETWORK  [conn11] received client metadata from 127.0.0.1:33226 conn11: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-07T16:56:20.855+0000 I STORAGE  [conn11] createCollection: free5gc.subscriptionData.authenticationData.authenticationSubscription with generated UUID: 71ba5851-b9ee-4863-8459-ca90e19c4ae7
+2022-12-07T16:56:20.952+0000 I STORAGE  [conn11] createCollection: free5gc.subscriptionData.provisionedData.amData with generated UUID: af041fb6-86da-45ae-b7b0-0ce6181e9f98
+2022-12-07T16:56:21.032+0000 I STORAGE  [conn11] createCollection: free5gc.subscriptionData.provisionedData.smData with generated UUID: d2fb6f5d-1697-48f1-8a99-eccea7bb46a5
+2022-12-07T16:56:21.067+0000 I STORAGE  [conn11] createCollection: free5gc.subscriptionData.provisionedData.smfSelectionSubscriptionData with generated UUID: a82e3c7b-2dfe-4e21-825c-282717ae87b9
+2022-12-07T16:56:21.117+0000 I STORAGE  [conn11] createCollection: free5gc.policyData.ues.amData with generated UUID: 2cecb088-0c9e-4ea9-9527-5b2b7751e4b4
+2022-12-07T16:56:21.153+0000 I STORAGE  [conn11] createCollection: free5gc.policyData.ues.smData with generated UUID: dc9e7c0e-1271-4493-9884-d3f03ee50c23
+2022-12-12T15:38:00.110+0000 I CONTROL  [main] ***** SERVER RESTARTED *****
+2022-12-12T15:38:00.384+0000 I CONTROL  [initandlisten] MongoDB starting : pid=42 port=27017 dbpath=/free5gc/mongodb 64-bit host=core
+2022-12-12T15:38:00.385+0000 I CONTROL  [initandlisten] db version v3.6.8
+2022-12-12T15:38:00.385+0000 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+2022-12-12T15:38:00.385+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+2022-12-12T15:38:00.385+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-12-12T15:38:00.385+0000 I CONTROL  [initandlisten] modules: none
+2022-12-12T15:38:00.386+0000 I CONTROL  [initandlisten] build environment:
+2022-12-12T15:38:00.386+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2022-12-12T15:38:00.386+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-12-12T15:38:00.386+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true }, storage: { dbPath: "/free5gc/mongodb" }, systemLog: { destination: "file", logAppend: true, logRotate: "reopen", path: "/free5gc/log/mongodb.log" } }
+2022-12-12T15:38:00.388+0000 W -        [initandlisten] Detected unclean shutdown - /free5gc/mongodb/mongod.lock is not empty.
+2022-12-12T15:38:00.396+0000 I -        [initandlisten] Detected data files in /free5gc/mongodb created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2022-12-12T15:38:00.397+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2022-12-12T15:38:00.397+0000 I STORAGE  [initandlisten] 
+2022-12-12T15:38:00.397+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2022-12-12T15:38:00.397+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2022-12-12T15:38:00.398+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1449M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2022-12-12T15:38:02.241+0000 I STORAGE  [initandlisten] WiredTiger message [1670859482:241412][42:0x7fe1cb41eac0], txn-recover: Main recovery loop: starting at 12/46080
+2022-12-12T15:38:02.242+0000 I STORAGE  [initandlisten] WiredTiger message [1670859482:242948][42:0x7fe1cb41eac0], txn-recover: Recovering log 12 through 13
+2022-12-12T15:38:02.352+0000 I STORAGE  [initandlisten] WiredTiger message [1670859482:352331][42:0x7fe1cb41eac0], txn-recover: Recovering log 13 through 13
+2022-12-12T15:38:02.451+0000 I STORAGE  [initandlisten] WiredTiger message [1670859482:451553][42:0x7fe1cb41eac0], txn-recover: Set global recovery timestamp: 0
+2022-12-12T15:38:02.619+0000 I CONTROL  [initandlisten] 
+2022-12-12T15:38:02.619+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-12-12T15:38:02.619+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-12-12T15:38:02.619+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2022-12-12T15:38:02.619+0000 I CONTROL  [initandlisten] 
+2022-12-12T15:38:03.057+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/free5gc/mongodb/diagnostic.data'
+2022-12-12T15:38:03.067+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+2022-12-12T15:38:04.026+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2022-12-12T15:38:17.366+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:52228 #1 (1 connection now open)
+2022-12-12T15:38:17.367+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:52230 #2 (2 connections now open)
+2022-12-12T15:38:17.371+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:52228 conn1: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-12T15:38:17.371+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:52230 conn2: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-12T15:38:17.372+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:52238 #3 (3 connections now open)
+2022-12-12T15:38:17.373+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:52238 conn3: { driver: { name: "mongo-go-driver", version: "v1.4.4" }, os: { type: "linux", architecture: "amd64" }, platform: "go1.14.4" }
+2022-12-12T15:39:31.775+0000 I NETWORK  [conn3] end connection 127.0.0.1:52238 (2 connections now open)
+2022-12-12T15:39:31.777+0000 I NETWORK  [conn2] end connection 127.0.0.1:52230 (1 connection now open)
+2022-12-12T15:39:31.777+0000 I NETWORK  [conn1] end connection 127.0.0.1:52228 (0 connections now open)

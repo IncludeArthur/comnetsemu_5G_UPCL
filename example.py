@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     core = net.addDockerHost(
         "core",
-        dimage="free5gc",
+        dimage="free5gc_3.0.5",
         ip="192.168.0.101",
         #dcmd="echo",
         docker_args={
