@@ -1,6 +1,0 @@
-time="2022-12-13T15:06:02Z" level=info msg="config version [1.0.2]" category=CFG component=AUSF
-time="2022-12-13T15:06:02Z" level=info msg="AUSF Log level is set to [info] level" category=Init component=AUSF
-time="2022-12-13T15:06:02Z" level=info msg=ausf category=App component=AUSF
-time="2022-12-13T15:06:02Z" level=info msg="AUSF version:  \n\tfree5GC version: v3.2.1\n\tbuild time:      2022-12-13T14:39:49Z\n\tcommit hash:     ee6a571a\n\tcommit time:     2022-05-02T15:25:07Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=AUSF
-time="2022-12-13T15:06:02Z" level=info msg="Server started" category=Init component=AUSF
-time="2022-12-13T15:06:02Z" level=info msg="ausfconfig Info: Version[1.0.2] Description[AUSF initial local configuration]\n" category=Init component=AUSF
