@@ -1,6 +1,6 @@
-time="2022-11-29T15:41:01Z" level=info msg="config version [1.0.1]" category=CFG component=PCF
-time="2022-11-29T15:41:01Z" level=info msg="PCF Log level is set to [info] level" category=Init component=PCF
-time="2022-11-29T15:41:01Z" level=info msg=pcf category=App component=PCF
-time="2022-11-29T15:41:01Z" level=info msg="PCF version:  \n\tfree5GC version: v3.1.1\n\tbuild time:      2022-11-23T15:45:53Z\n\tcommit hash:     d8974277\n\tcommit time:     2022-04-07T15:54:12Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=PCF
-time="2022-11-29T15:41:01Z" level=info msg="Server started" category=Init component=PCF
-time="2022-11-29T15:41:01Z" level=info msg="pcfconfig Info: Version[1.0.1] Description[PCF initial local configuration]" category=Util component=PCF
+time="2022-12-13T15:06:02Z" level=info msg="config version [1.0.1]" category=CFG component=PCF
+time="2022-12-13T15:06:02Z" level=info msg="PCF Log level is set to [info] level" category=Init component=PCF
+time="2022-12-13T15:06:02Z" level=info msg=pcf category=App component=PCF
+time="2022-12-13T15:06:02Z" level=info msg="PCF version:  \n\tfree5GC version: v3.2.1\n\tbuild time:      2022-12-13T14:40:17Z\n\tcommit hash:     97ddbbd6\n\tcommit time:     2022-05-02T15:28:05Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=PCF
+time="2022-12-13T15:06:02Z" level=info msg="Server started" category=Init component=PCF
+time="2022-12-13T15:06:02Z" level=info msg="pcfconfig Info: Version[1.0.1] Description[PCF initial local configuration]" category=Util component=PCF

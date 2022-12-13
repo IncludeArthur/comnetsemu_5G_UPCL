@@ -1,3 +1,21 @@
-time="2022-11-29T15:41:00Z" level=error msg="open ./config/uerouting.yaml: no such file or directory" category=CFG component=SMF
-time="2022-11-29T15:41:00Z" level=error msg="[-- PLEASE REFER TO SAMPLE CONFIG FILE COMMENTS --]" category=CFG component=SMF
-time="2022-11-29T15:41:00Z" level=error msg="SMF Run error: Failed to initialize !!\n" category=App component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="SMF config version [1.0.2]" category=CFG component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="UE-Routing config version [1.0.1]" category=CFG component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="SMF Log level is set to [info] level" category=Init component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="set log level : info" category=NAS component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set report call : false" category=NAS component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set log level : info" category=NGAP component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set report call : false" category=NGAP component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set log level : info" category=Aper component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set report call : false" category=Aper component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set log level : info" category=PFCP component=LIB
+time="2022-12-13T15:06:02Z" level=info msg="set report call : false" category=PFCP component=LIB
+time="2022-12-13T15:06:02Z" level=info msg=smf category=App component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="SMF version:  \n\tfree5GC version: v3.2.1\n\tbuild time:      2022-12-13T14:40:22Z\n\tcommit hash:     de70bf6c\n\tcommit time:     2022-06-28T04:52:40Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="smfconfig Info: Version[1.0.2] Description[SMF initial local configuration]" category=CTX component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="Endpoints: [127.0.0.8]" category=CTX component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="Server started" category=Init component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="SMF Registration to NRF {ccf65601-bb22-4307-bdf5-9169620929a7 SMF REGISTERED 0 0xc0000ac2e0 0xc0000ac320 [] []   [127.0.0.2] [] <nil> [] [] <nil> 0 0 0 area1 <nil> <nil> <nil> <nil> 0xc0000bc200 <nil> <nil> <nil> <nil> <nil> map[] <nil> false 0xc0000ac120 false false []}" category=Init component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="Listen on 127.0.0.1:8805" category=PFCP component=SMF
+time="2022-12-13T15:06:02Z" level=info msg="Sending PFCP Association Request to UPF[127.0.0.8]" category=App component=SMF
+time="2022-12-13T15:06:11Z" level=info msg="Remove Request Transaction [1]\n" category=PFCP component=LIB
+time="2022-12-13T15:06:11Z" level=error msg="Failed to setup an association with UPF[127.0.0.8], error:Request Transaction [1]: retry-out" category=App component=SMF

@@ -1,7 +1,7 @@
-time="2022-11-29T15:41:01Z" level=info msg="config version [1.0.2]" category=CFG component=UDM
-time="2022-11-29T15:41:01Z" level=info msg="UDM Log level is set to [info] level" category=Init component=UDM
-time="2022-11-29T15:41:01Z" level=info msg=udm category=App component=UDM
-time="2022-11-29T15:41:01Z" level=info msg="UDM version:  \n\tfree5GC version: v3.1.1\n\tbuild time:      2022-11-23T15:46:18Z\n\tcommit hash:     78f5c27d\n\tcommit time:     2022-04-07T16:22:52Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDM
-time="2022-11-29T15:41:01Z" level=info msg="UDM Config Info: Version[1.0.2] Description[UDM initial local configuration]" category=Init component=UDM
-time="2022-11-29T15:41:01Z" level=info msg="Server started" category=Init component=UDM
-time="2022-11-29T15:41:01Z" level=info msg="udmconfig Info: Version[1.0.2] Description[UDM initial local configuration]" category=Util component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="config version [1.0.2]" category=CFG component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="UDM Log level is set to [info] level" category=Init component=UDM
+time="2022-12-13T15:06:02Z" level=info msg=udm category=App component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="UDM version:  \n\tfree5GC version: v3.2.1\n\tbuild time:      2022-12-13T14:40:27Z\n\tcommit hash:     dd730c19\n\tcommit time:     2022-05-02T15:30:19Z\n\tgo version:      go1.14.4 linux/amd64" category=App component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="UDM Config Info: Version[1.0.2] Description[UDM initial local configuration]" category=Init component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="Server started" category=Init component=UDM
+time="2022-12-13T15:06:02Z" level=info msg="udmconfig Info: Version[1.0.2] Description[UDM initial local configuration]" category=Util component=UDM

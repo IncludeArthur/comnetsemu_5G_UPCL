@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     setLogLevel("info")
 
-    prj_folder = "/home/ubuntu/comnetsemu_5G_UPCL"
+    prj_folder = "/home/ubuntu/comnetsemu_free5gc"
     mongodb_folder = "/home/ubuntu/mongodbdata"
 
     net = Containernet(controller=Controller, link=TCLink, xterms=False)
@@ -30,12 +30,12 @@ if __name__ == "__main__":
 
     core = net.addDockerHost(
         "core",
-        dimage="free5gc_3.0.5",
+        dimage="free5gc",
         ip="192.168.0.101",
-        #dcmd="echo",
+        #dcmd="/free5gc/scripts/run_core.sh",
         docker_args={
             "hostname": "core",
-            "ports": {"5000/tcp":5000, "8000" :8000},
+            "ports": {"5000/tcp":5000,"8000" :8000},
             "volumes": {
                 prj_folder + "/free5gc/config":{
                     "bind": "/free5gc/config",
@@ -59,6 +59,33 @@ if __name__ == "__main__":
             "devices": "/dev/net/tun:/dev/net/tun:rwm"
         },
     )
+
+    #info("*** Add webui\n")
+
+    # webui = net.addDockerHost(
+    #     "webui",
+    #     dimage="free5gc_webui",
+    #     ip="192.168.0.103",
+    #     #dcmd="/free5gc/scripts/run_core.sh",
+    #     docker_args={
+    #         "hostname": "core",
+    #         "ports": {"5000/tcp":5000},
+    #         "volumes": {
+    #             prj_folder + "/free5gc/config":{
+    #                 "bind": "/free5gc/config",
+    #                 "mode": "rw",
+    #             },
+    #             prj_folder + "/free5gc/scripts":{
+    #                 "bind": "/free5gc/scripts",
+    #                 "mode": "rw",
+    #             },
+    #             prj_folder + "/log": {
+    #                 "bind": "/free5gc/log",
+    #                 "mode": "rw",
+    #             },
+    #         },
+    #     },
+    # )
 
     info("*** Add gNB and UE\n")
 
@@ -98,6 +125,7 @@ if __name__ == "__main__":
     net.addLink(gnb,  s1, bw=1000, delay="1ms", intfName1="gnb-s1",  intfName2="s1-gnb")
     net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
     net.addLink(core,  s2, bw=1000, delay="1ms", intfName1="core-s2",  intfName2="s2-core")
+    #net.addLink(webui,  s2, bw=1000, delay="1ms", intfName1="webui-s2",  intfName2="s2-webui")
 
     info("\n*** Starting network\n")
     net.start()
