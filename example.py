@@ -60,33 +60,6 @@ if __name__ == "__main__":
         },
     )
 
-    #info("*** Add webui\n")
-
-    # webui = net.addDockerHost(
-    #     "webui",
-    #     dimage="free5gc_webui",
-    #     ip="192.168.0.103",
-    #     #dcmd="/free5gc/scripts/run_core.sh",
-    #     docker_args={
-    #         "hostname": "core",
-    #         "ports": {"5000/tcp":5000},
-    #         "volumes": {
-    #             prj_folder + "/free5gc/config":{
-    #                 "bind": "/free5gc/config",
-    #                 "mode": "rw",
-    #             },
-    #             prj_folder + "/free5gc/scripts":{
-    #                 "bind": "/free5gc/scripts",
-    #                 "mode": "rw",
-    #             },
-    #             prj_folder + "/log": {
-    #                 "bind": "/free5gc/log",
-    #                 "mode": "rw",
-    #             },
-    #         },
-    #     },
-    # )
-
     info("*** Add gNB and UE\n")
 
     gnb = net.addDockerHost(
@@ -98,15 +71,15 @@ if __name__ == "__main__":
             "hostname": "gnb",
             "volumes": {
                 prj_folder + "/ueransim/config":{
-                    "bind": "/ueransim/config",
+                    "bind": "/UERANSIM/config",
                     "mode": "rw",
                 },
                 prj_folder + "/ueransim/scripts":{
-                    "bind": "/ueransim/scripts",
+                    "bind": "/UERANSIM/scripts",
                     "mode": "rw",
                 },
                 prj_folder + "/log": {
-                    "bind": "/ueransim/log",
+                    "bind": "/UERANSIM/log",
                     "mode": "rw",
                 },
             },
@@ -125,8 +98,7 @@ if __name__ == "__main__":
     net.addLink(gnb,  s1, bw=1000, delay="1ms", intfName1="gnb-s1",  intfName2="s1-gnb")
     net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
     net.addLink(core,  s2, bw=1000, delay="1ms", intfName1="core-s2",  intfName2="s2-core")
-    #net.addLink(webui,  s2, bw=1000, delay="1ms", intfName1="webui-s2",  intfName2="s2-webui")
-
+ 
     info("\n*** Starting network\n")
     net.start()
 

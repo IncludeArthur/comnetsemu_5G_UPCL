@@ -33,6 +33,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     	bash \
     	iproute2 \
+        libmnl0 \
+        libyaml-0-2 \
     	nano \
         curl \
         net-tools \
