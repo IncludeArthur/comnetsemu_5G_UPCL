@@ -64,7 +64,7 @@ if __name__ == "__main__":
         "iupf",
         dimage="free5gc",
         ip="192.168.0.102",
-        #dcmd="/free5gc/scripts/run_core.sh",
+        #dcmd="bash /free5gc/scripts/ULCL/run_iupf.sh",
         docker_args={
             "hostname": "iupf",
             "volumes": {
@@ -95,7 +95,7 @@ if __name__ == "__main__":
         "psaupf",
         dimage="free5gc",
         ip="192.168.0.103",
-        #dcmd="/free5gc/scripts/run_core.sh",
+        #dcmd="bash /free5gc/scripts/ULCL/run_psaupf.sh",
         docker_args={
             "hostname": "psaupf",
             "volumes": {
@@ -182,6 +182,32 @@ if __name__ == "__main__":
         },
     )
 
+    ue = net.addDockerHost(
+        "ue",
+        dimage="ueransim",
+        ip="192.168.0.202",
+        #dcmd="echo",
+        docker_args={
+            "hostname": "ue",
+            "volumes": {
+                prj_folder + "/ueransim/config":{
+                    "bind": "/UERANSIM/config",
+                    "mode": "rw",
+                },
+                prj_folder + "/ueransim/scripts":{
+                    "bind": "/UERANSIM/scripts",
+                    "mode": "rw",
+                },
+                prj_folder + "/log": {
+                    "bind": "/UERANSIM/log",
+                    "mode": "rw",
+                },
+            },
+            "cap_add": ["NET_ADMIN"],
+            "devices": "/dev/net/tun:/dev/net/tun:rwm"
+        },
+    )
+
     info("*** Adding switch\n")
 
     s1 = net.addSwitch("s1")
@@ -189,14 +215,26 @@ if __name__ == "__main__":
 
     info("*** Adding links\n")
 
+    net.addLink(ue,  s1, bw=1000, delay="1ms", intfName1="ue-s1",  intfName2="s1-ue")
     net.addLink(gnb,  s1, bw=1000, delay="1ms", intfName1="gnb-s1",  intfName2="s1-gnb")
+
     net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
+
     net.addLink(cp,  s2, bw=1000, delay="1ms", intfName1="cp-s2",  intfName2="s2-cp")
     net.addLink(iupf,  s2, bw=1000, delay="1ms", intfName1="iupf-s2",  intfName2="s2-iupf")
     net.addLink(psaupf,  s2, bw=1000, delay="1ms", intfName1="psaupf-s2",  intfName2="s2-psaupf")
  
     info("\n*** Starting network\n")
     net.start()
+
+    info("\n*** Executing initial cmds\n")
+
+    iupf.cmd("bash /free5gc/scripts/ULCL/run_iupf.sh")
+    psaupf.cmd("bash /free5gc/scripts/ULCL/run_psaupf.sh")
+    cp.cmd("bash /free5gc/scripts/ULCL/run_cp.sh")
+
+    gnb.cmd("/UERANSIM/build/nr-gnb -c ../config/free5gc-gnb.yaml &")
+    ue.cmd("/UERANSIM/build/nr-ue -c ../config/free5gc-ue.yaml &")
 
     if not AUTOTEST_MODE:
         CLI(net)
