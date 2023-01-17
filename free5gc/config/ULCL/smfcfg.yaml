@@ -59,7 +59,7 @@ configuration:
             endpoints: # the IP address of this N3/N9 interface on this UPF
               - 192.168.0.102
             networkInstance: internet # Data Network Name (DNN)
-      PSA-UPF:  # the name of the node
+      PSA-UPF1:  # the name of the node
         type: UPF # the type of the node (AN or UPF)
         nodeID: 192.168.0.103 # the IP/FQDN of N4 interface on this UPF (PFCP)
         sNssaiUpfInfos: # S-NSSAI information list for this UPF
@@ -75,11 +75,27 @@ configuration:
             endpoints: # the IP address of this N3/N9 interface on this UPF
               - 192.168.0.103
             networkInstance: internet # Data Network Name (DNN)
+      PSA-UPF2:  # the name of the node
+        type: UPF # the type of the node (AN or UPF)
+        nodeID: 192.168.0.104 # the IP/FQDN of N4 interface on this UPF (PFCP)
+        sNssaiUpfInfos: # S-NSSAI information list for this UPF
+          - sNssai: # S-NSSAI (Single Network Slice Selection Assistance Information)
+              sst: 1 # Slice/Service Type (uinteger, range: 0~255)
+              sd: 010203 # Slice Differentiator (3 bytes hex string, range: 000000~FFFFFF)
+            dnnUpfInfoList: # DNN information list for this S-NSSAI
+              - dnn: internet
+        interfaces: # Interface list for this UPF
+          - interfaceType: N9 # the type of the interface (N3 or N9)
+            endpoints: # the IP address of this N3/N9 interface on this UPF
+              - 192.168.0.104
+            networkInstance: internet # Data Network Name (DNN)
     links: # the topology graph of userplane, A and B represent the two nodes of each link
       - A: gNB1
         B: I-UPF
       - A: I-UPF
-        B: PSA-UPF
+        B: PSA-UPF1
+      - A: I-UPF
+        B: PSA-UPF2
   nrfUri: http://127.0.0.10:8000 # a valid URI of NRF
   ulcl: true
 

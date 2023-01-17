@@ -91,13 +91,13 @@ if __name__ == "__main__":
         },
     )
 
-    psaupf = net.addDockerHost(
-        "psaupf",
+    psaupf1 = net.addDockerHost(
+        "psaupf1",
         dimage="free5gc",
         ip="192.168.0.103",
         #dcmd="bash /free5gc/scripts/ULCL/run_psaupf.sh",
         docker_args={
-            "hostname": "psaupf",
+            "hostname": "psaupf1",
             "volumes": {
                 prj_folder + "/free5gc/config":{
                     "bind": "/free5gc/config",
@@ -122,36 +122,36 @@ if __name__ == "__main__":
         },
     )
 
-    # psaupf2 = net.addDockerHost(
-    #     "psa-upf2",
-    #     dimage="free5gc",
-    #     ip="192.168.0.104",
-    #     #dcmd="/free5gc/scripts/run_core.sh",
-    #     docker_args={
-    #         "hostname": "psa-upf2",
-    #         "volumes": {
-    #             prj_folder + "/free5gc/config":{
-    #                 "bind": "/free5gc/config",
-    #                 "mode": "rw",
-    #             },
-    #             prj_folder + "/free5gc/scripts":{
-    #                 "bind": "/free5gc/scripts",
-    #                 "mode": "rw",
-    #             },
-    #             prj_folder + "/log": {
-    #                 "bind": "/free5gc/log",
-    #                 "mode": "rw",
-    #             },
-    #             mongodb_folder :{
-    #                 "bind": "/free5gc/mongodb",
-    #                 "mode": "rw",
-    #             },
-    #         },
-    #         "cap_add": ["NET_ADMIN"],
-    #         "sysctls": {"net.ipv4.ip_forward": 1},
-    #         "devices": "/dev/net/tun:/dev/net/tun:rwm"
-    #     },
-    # )
+    psaupf2 = net.addDockerHost(
+        "psaupf2",
+        dimage="free5gc",
+        ip="192.168.0.104",
+        #dcmd="/free5gc/scripts/run_core.sh",
+        docker_args={
+            "hostname": "psaupf2",
+            "volumes": {
+                prj_folder + "/free5gc/config":{
+                    "bind": "/free5gc/config",
+                    "mode": "rw",
+                },
+                prj_folder + "/free5gc/scripts":{
+                    "bind": "/free5gc/scripts",
+                    "mode": "rw",
+                },
+                prj_folder + "/log": {
+                    "bind": "/free5gc/log",
+                    "mode": "rw",
+                },
+                mongodb_folder :{
+                    "bind": "/free5gc/mongodb",
+                    "mode": "rw",
+                },
+            },
+            "cap_add": ["NET_ADMIN"],
+            "sysctls": {"net.ipv4.ip_forward": 1},
+            "devices": "/dev/net/tun:/dev/net/tun:rwm"
+        },
+    )
 
 
     info("*** Add gNB and UE\n")
@@ -212,17 +212,21 @@ if __name__ == "__main__":
 
     s1 = net.addSwitch("s1")
     s2 = net.addSwitch("s2")
+    s3 = net.addSwitch("s3")
 
     info("*** Adding links\n")
+
+    net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
+    net.addLink(s2,  s3, bw=1000, delay="10ms", intfName1="s2-s3",  intfName2="s3-s2")
 
     net.addLink(ue,  s1, bw=1000, delay="1ms", intfName1="ue-s1",  intfName2="s1-ue")
     net.addLink(gnb,  s1, bw=1000, delay="1ms", intfName1="gnb-s1",  intfName2="s1-gnb")
 
-    net.addLink(s1,  s2, bw=1000, delay="10ms", intfName1="s1-s2",  intfName2="s2-s1")
-
     net.addLink(cp,  s2, bw=1000, delay="1ms", intfName1="cp-s2",  intfName2="s2-cp")
     net.addLink(iupf,  s2, bw=1000, delay="1ms", intfName1="iupf-s2",  intfName2="s2-iupf")
-    net.addLink(psaupf,  s2, bw=1000, delay="1ms", intfName1="psaupf-s2",  intfName2="s2-psaupf")
+
+    net.addLink(psaupf1,  s3, bw=1000, delay="1ms", intfName1="psaupf1-s3",  intfName2="s3-psaupf1")
+    net.addLink(psaupf2,  s3, bw=1000, delay="1ms", intfName1="psaupf2-s3",  intfName2="s3-psaupf2")
  
     info("\n*** Starting network\n")
     net.start()
@@ -230,7 +234,8 @@ if __name__ == "__main__":
     info("\n*** Executing initial cmds\n")
 
     iupf.cmd("bash /free5gc/scripts/ULCL/run_iupf.sh")
-    psaupf.cmd("bash /free5gc/scripts/ULCL/run_psaupf.sh")
+    psaupf1.cmd("bash /free5gc/scripts/ULCL/run_psaupf1.sh")
+    psaupf2.cmd("bash /free5gc/scripts/ULCL/run_psaupf2.sh")
     cp.cmd("bash /free5gc/scripts/ULCL/run_cp.sh")
 
     gnb.cmd("/UERANSIM/build/nr-gnb -c ../config/free5gc-gnb.yaml &")
