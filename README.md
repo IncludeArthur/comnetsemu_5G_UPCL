@@ -1,8 +1,38 @@
-# comnetsemu_5GC
+# Comnetsemu Free5GC ULCL
 
-![ULCL](https://user-images.githubusercontent.com/44785274/185954032-44c7c35e-3724-4923-9991-814579cae152.png)
+This project emulates a full 5G network and test the Uplink Classifier (ULCL) functionalities.
 
-H. -M. Chen, Y. -F. Lu, S. -Y. Chen, C. -J. Chang and Z. -X. Zheng, "Design of an NFV MANO Architecture for 5G Private Network with 5G CN Cloud-Edge Collaborative Mechanism," 2022 8th International Conference on Applied System Innovation (ICASI), 2022, pp. 92-95, doi: 10.1109/ICASI55125.2022.9774446.
+### Dependencies
+- [Comnetsemu](https://git.comnets.net/public-repo/comnetsemu)
+- [Free5GC](https://github.com/free5gc/free5gc)
+- [UERANSIM](https://github.com/aligungr/UERANSIM)
 
-## Docker images
-https://github.com/free5gc/free5gc-compose
+### Network Topolgy
+![ULCL](./figures/comnetsemu_ulcl_architecture.png)
+
+### Environment setup
+
+Install the latest version of Comnetsemu in a Ubuntu 20.04 VM following one of the 
+[available options](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).
+
+Inside the VM, download and install the [gtp5g kernel module](https://github.com/free5gc/gtp5g) required by the UPF.
+```
+git clone -b v0.6.8 https://github.com/free5gc/gtp5g.git
+cd gtp5g
+make
+sudo make install
+```
+Clone this repository in the comnetsemu VM.
+
+Build the Free5GC Docker image
+```
+cd free5gc
+docker build --no-cache --force-rm -t free5gc .
+```
+Build the UERANSIM Docker image
+```
+cd ueransim
+docker build --no-cache --force-rm -t ueransim .
+```
+
+### Running the project
