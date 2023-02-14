@@ -64,10 +64,17 @@ Insert the missing data using the SUPI ```imsi-208930000000003``` and Submit.
 
 ### Testing the functionalities
 
-In the Comnetsemu VM open two instances of Wireshark and start listining to the ```s3-psaupf1``` and ```s3-psaupf2``` interfaces. 
-As an alternative it is possible to use tcpdump instead of Wireshark. 
-
 Enter the UE container
 ```
 $ ./enter_container.sh ue
 ```
+Verify the UE connectivity with a ping test on the uesimtun0 TUNnel interface
+```
+# ping -I uesimtun0 8.8.8.8
+```
+Confirm using tcpdump that the packet goes through the PSA-UPF1.
+```
+$ ./enter_container.sh psaupf1
+$ tcpdump
+```
+Ping 172.17.0.1 and 172.18.0.1 and confirm that the packets go through the PSA-UPF1 and PSA-UPF2 respectively, accordingly to the uerouting.yaml configuration.
