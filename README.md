@@ -35,9 +35,9 @@ cd ueransim
 docker build --no-cache --force-rm -t ueransim .
 ```
 
-Customize the following variables in the ```example_ulcl.py``` file
-- ```prj_folder```: pointing at the local repository
-- ```mongodb_folder```: pointing at a user-defined path where the MongoDB data will be stored
+Customize the following variables in the `example_ulcl.py` file
+- `prj_folder`: pointing at the local repository
+- `mongodb_folder`: pointing at a user-defined path where the MongoDB data will be stored
 
 ### Running the project
 
@@ -59,7 +59,7 @@ Password: free5gc
 ```
 
 Navigate to the SUBSCRIBERS tab and press the New Subscriber button. 
-Insert the missing data using the SUPI ```imsi-208930000000003``` and Submit.
+Insert the missing data using the SUPI `imsi-208930000000003` and Submit.
 ![](https://camo.githubusercontent.com/71579c2bad8c44efc3311bcf9651e30293f28d232bb18a78c871d483a6ef2897/68747470733a2f2f692e696d6775722e636f6d2f614375524a745a2e706e67)
 
 ### Testing the functionalities
@@ -68,13 +68,13 @@ Enter the UE container
 ```
 $ ./enter_container.sh ue
 ```
-Verify the UE connectivity with a ping test on the uesimtun0 TUNnel interface
+Verify the UE connectivity with a ping test on the `uesimtun0` TUNnel interface
 ```
 # ping -I uesimtun0 8.8.8.8
 ```
-Confirm using tcpdump that the packet goes through the PSA-UPF1.
+Confirm using `tcpdump` that the packet goes through the PSA-UPF1.
 ```
 $ ./enter_container.sh psaupf1
 $ tcpdump
 ```
-Ping 172.17.0.1 and 172.18.0.1 and confirm that the packets go through the PSA-UPF1 and PSA-UPF2 respectively, accordingly to the uerouting.yaml configuration.
+Ping 172.17.0.1 and 172.18.0.1 and confirm that the packets go through the PSA-UPF1 and PSA-UPF2 respectively, accordingly to the `uerouting.yaml` configuration.
