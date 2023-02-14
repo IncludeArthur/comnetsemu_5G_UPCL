@@ -35,4 +35,39 @@ cd ueransim
 docker build --no-cache --force-rm -t ueransim .
 ```
 
+Customize the following variables in the ```example_ulcl.py``` file
+- ```prj_folder```: pointing at the local repository
+- ```mongodb_folder```: pointing at a user-defined path where the MongoDB data will be stored
+
 ### Running the project
+
+To start the network topology run
+
+```$ sudo python3 example_ulcl.py```
+
+The script creates the hosts and automatically start the 5GC, gNB and UE.
+
+If it is the first time executing the script, the UE connection will fail since there are no subscribers registered in the database.
+To fix the problem simply connect to the Free5GC webconsole from the Comnetsemu VM at the address
+```
+localhost:5000/
+```
+Using the default credentials
+```
+Username: admin
+Password: free5gc
+```
+
+Navigate to the SUBSCRIBERS tab and press the New Subscriber button. 
+Insert the missing data using the SUPI ```imsi-208930000000003``` and Submit.
+![](https://camo.githubusercontent.com/71579c2bad8c44efc3311bcf9651e30293f28d232bb18a78c871d483a6ef2897/68747470733a2f2f692e696d6775722e636f6d2f614375524a745a2e706e67)
+
+### Testing the functionalities
+
+In the Comnetsemu VM open two instances of Wireshark and start listining to the ```s3-psaupf1``` and ```s3-psaupf2``` interfaces. 
+As an alternative it is possible to use tcpdump instead of Wireshark. 
+
+Enter the UE container
+```
+$ ./enter_container.sh ue
+```
