@@ -40,6 +40,8 @@ RUN apt-get update && \
         net-tools \
         tcpdump \
         iptables \
+        iputils-ping \
+        wget \
         mongodb \
         iperf3 && \
     apt-get autoremove -y && apt-get autoclean
